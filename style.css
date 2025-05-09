@@ -1,0 +1,63 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#map {
+    flex: 1;
+    z-index: 1;
+}
+
+#controls {
+    padding: 10px;
+    background: #f8f9fa;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    z-index: 10;
+}
+
+button {
+    padding: 8px 16px;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Larger text for mobile */
+    min-width: 120px; /* Ensure buttons have minimum width */
+}
+
+button:hover {
+    background: #005a9e;
+}
+
+button:active {
+    background: #004275;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #controls {
+        padding: 12px 5px;
+        flex-wrap: wrap; /* Allow buttons to wrap on very small screens */
+    }
+    
+    button {
+        padding: 10px 16px; /* Larger touch targets */
+        flex: 1;           /* Let buttons expand */
+        min-width: 140px;  /* Minimum width for buttons */
+    }
+}
